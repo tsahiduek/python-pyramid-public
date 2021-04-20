@@ -1,0 +1,16 @@
+version: 1.0 
+runtime: python3 
+build:
+  commands:
+    build:
+      - python setup.py develop
+run:
+  command: python runapp.py
+  network:
+    port: 8000
+    env: PORT
+  env:
+    - name: FOO
+      value: "walter white foo" 
+    - name: NAME
+      value: "walter white name" 
